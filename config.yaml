@@ -1,0 +1,23 @@
+# ReturnCycle AI configuration (all values are simulation assumptions)
+seed: 42
+data:
+  demo:  {orders: 25000,  customers: 6000,  products: 800}
+  full:  {orders: 100000, customers: 20000, products: 2000}
+  start_date: "2025-11-01"
+  end_date:   "2026-09-30"
+grading:            # condition score thresholds (score >= threshold)
+  A: 85
+  B: 70
+  C: 50
+  D: 30
+economics:
+  holding_cost_per_day: 0.0012   # share of market value per day in the warehouse
+  outbound_share_of_inbound: 0.5 # outbound shipping for resale/refurb vs reverse shipping
+optimizer_weights:
+  economic: 0.50
+  suitability: 0.12
+  usability: 0.06
+  market: 0.10
+  cost: 0.06
+  time: 0.08
+  risk: 0.08

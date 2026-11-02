@@ -1,0 +1,168 @@
+{
+  "condition": {
+    "model": "XGBClassifier",
+    "target": "condition_grade",
+    "n_train": 7210,
+    "n_test": 1803,
+    "accuracy": 0.9595119245701609,
+    "precision_weighted": 0.959733223474709,
+    "recall_weighted": 0.9595119245701609,
+    "f1_weighted": 0.9587397322406117,
+    "f1_macro": 0.8481593338589519,
+    "majority_class_baseline_accuracy": 0.4714364947310039,
+    "classes": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "confusion_matrix": [
+      [
+        838,
+        12,
+        0,
+        0,
+        0
+      ],
+      [
+        13,
+        353,
+        4,
+        0,
+        0
+      ],
+      [
+        0,
+        16,
+        450,
+        7,
+        0
+      ],
+      [
+        0,
+        0,
+        15,
+        86,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        6,
+        3
+      ]
+    ],
+    "feature_importance": {
+      "functional_damage": 0.25117725133895874,
+      "component_health": 0.10573917627334595,
+      "cat_Clothing": 0.09761462360620499,
+      "water_damage": 0.09056967496871948,
+      "cosmetic_damage": 0.07492243498563766,
+      "screen_condition": 0.06447621434926987,
+      "cat_Shoes": 0.053002044558525085,
+      "missing_accessories": 0.052963774651288986,
+      "usage_level": 0.022176947444677353,
+      "packaging_condition": 0.019420919939875603,
+      "battery_health": 0.017721548676490784,
+      "cat_Headphones": 0.014745227992534637,
+      "cat_Cameras": 0.013382034376263618,
+      "cat_Gaming Accessories": 0.012634226121008396,
+      "cat_Tablets": 0.012440424412488937
+    }
+  },
+  "recovery": {
+    "model": "XGBClassifier",
+    "target": "best_pathway",
+    "n_train": 7210,
+    "n_test": 1803,
+    "accuracy": 0.942318358291736,
+    "precision_weighted": 0.9415557432054568,
+    "recall_weighted": 0.942318358291736,
+    "f1_weighted": 0.9416061538961578,
+    "f1_macro": 0.8853750597007669,
+    "majority_class_baseline_accuracy": 0.7459789240155297,
+    "classes": [
+      "Component Recovery",
+      "Material Recovery",
+      "Refurbish",
+      "Resale"
+    ],
+    "confusion_matrix": [
+      [
+        100,
+        3,
+        1,
+        20
+      ],
+      [
+        0,
+        41,
+        2,
+        5
+      ],
+      [
+        4,
+        1,
+        246,
+        35
+      ],
+      [
+        9,
+        4,
+        20,
+        1312
+      ]
+    ],
+    "feature_importance": {
+      "cat_Clothing": 0.1443093717098236,
+      "condition_score": 0.12502095103263855,
+      "repair_to_value": 0.09117038547992706,
+      "estimated_resale_value": 0.05036824569106102,
+      "cat_Home Appliances": 0.04936942458152771,
+      "cat_Headphones": 0.045732539147138596,
+      "cat_Shoes": 0.0422876738011837,
+      "component_health": 0.03537735715508461,
+      "screen_condition": 0.033888425678014755,
+      "water_damage": 0.031200941652059555,
+      "product_age_days": 0.030131231993436813,
+      "battery_health": 0.02864586003124714,
+      "cat_Cameras": 0.027264825999736786,
+      "functional_damage": 0.026898032054305077,
+      "cat_Furniture": 0.02596808597445488
+    }
+  },
+  "value": {
+    "model": "XGBRegressor",
+    "target": "recovered_value",
+    "n_train": 7210,
+    "n_test": 1803,
+    "rmse": 1642.3703839420562,
+    "mae": 586.1281789255512,
+    "r2": 0.9562930406908334,
+    "baseline_rmse_predict_mean": 7874.341969290148,
+    "feature_importance": {
+      "estimated_resale_value": 0.7153453826904297,
+      "condition_score": 0.06637713313102722,
+      "original_value": 0.046691641211509705,
+      "screen_condition": 0.04020240902900696,
+      "cat_Furniture": 0.020063363015651703,
+      "processing_cost": 0.017205677926540375,
+      "repair_to_value": 0.013893254101276398,
+      "water_damage": 0.009098264388740063,
+      "product_age_days": 0.007418222259730101,
+      "cat_Cameras": 0.007350409869104624,
+      "packaging_condition": 0.007160418666899204,
+      "battery_health": 0.006873646285384893,
+      "component_health": 0.00675027072429657,
+      "functional_damage": 0.006633383221924305,
+      "estimated_repair_cost": 0.005392640829086304
+    }
+  },
+  "n_rows": 9013,
+  "trained_at": "2026-10-30 07:18:51",
+  "seconds": 3.3,
+  "algorithm": "XGBoost",
+  "note": "Trained on synthetic data; metrics describe how well the model reproduces the synthetic engine."
+}

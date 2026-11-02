@@ -1,0 +1,11 @@
+{
+  "label": "Synthetic demonstration dataset created for ReturnCycle AI.",
+  "mode": "demo",
+  "seed": 42,
+  "orders": 25000,
+  "customers": 6000,
+  "products": 800,
+  "returns": 9013,
+  "note": "Return-enriched synthetic sample; return rates are higher than real-world averages.",
+  "generated_seconds": 4.0
+}
